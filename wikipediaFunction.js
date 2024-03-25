@@ -3,7 +3,9 @@ const wiki = require('wikipedia');
 const searchOnPedia = async (prompt) => {
     try {
         const searchPage = await wiki.page(prompt);
-        console.log(searchPage)
+        const summary = await searchPage.summary()
+        const summaryExtract = summary.extract
+        return summaryExtract
     } catch (error) {
         console.log(error);
     }
