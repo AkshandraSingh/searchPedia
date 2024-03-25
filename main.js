@@ -7,8 +7,8 @@ const rl = readline.createInterface({
 });
 
 
-console.log(chalk.blue("Welcome Bro!"))
-rl.question('What is your name? ', (name) => {
-    console.log(`Hello, ${name}!`);
+console.log(chalk.bgRedBright.bold("Welcome To Search Pedia\n"))
+rl.question("Enter a Topic to Search on Wikipedia : ", (prompt) => {
+    console.log(chalk.bgBlueBright.bold(`Your Prompt is ${prompt}`))
     rl.close();
 });
